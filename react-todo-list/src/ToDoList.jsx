@@ -1,4 +1,7 @@
 import React, {useState} from "react"
+import { GoTrash } from "react-icons/go";
+import { FaArrowUp } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 
 function ToDoList(){
 
@@ -64,15 +67,15 @@ function ToDoList(){
                     <button
                     className="delete-button"
                     onClick={() => deleteTask(index)}>
-                        <img src="./trash.svg"></img></button>
+                        <GoTrash /></button>
                         <button
                     className="move-button"
                     onClick={() => moveTaskUp(index)}>
-                        UP</button>
+                       <FaArrowUp /></button>
                         <button
                     className="move-button"
                     onClick={() => moveTaskDown(index)}>
-                        Down</button>
+                       <FaArrowDown /></button>
                 </li>
             )}
         </ol>
